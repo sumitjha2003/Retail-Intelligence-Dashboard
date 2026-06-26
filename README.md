@@ -58,13 +58,20 @@ The business had transaction-level data sitting in a database with no analytical
 
 > Add your exported dashboard screenshots to a `/screenshots` folder and reference them below.
 
-| Executive Summary | Sales Trends |
-|---|---|
-| ![Executive Summary](screenshots/page1_executive_summary.png) | ![Sales Trends](screenshots/page2_sales_trends.png) |
+**Page 1 — Executive Summary**
+![Executive Summary](Screenshots/page1_executive_summary.png)
 
-| Customer Analytics | RFM Segmentation |
-|---|---|
-| ![Customer Analytics](screenshots/page3_customer_analytics.png) | ![RFM Segmentation](screenshots/page5_rfm_segments.png) |
+**Page 2 — Sales Trends**
+![Sales Trends](Screenshots/page2_sales_trends.png)
+
+**Page 3 — Customer Analytics**
+![Customer Analytics](Screenshots/page3_customer_analytics.png)
+
+**Page 4 — Category Profitability**
+![Category Profitability](Screenshots/page4_category_profitability.png)
+
+**Page 5 — RFM Segmentation**
+![RFM Segmentation](Screenshots/page5_rfm_segments.png)
 
 ---
 
@@ -128,7 +135,7 @@ FROM monthly_revenue
 GROUP BY month_name;
 ```
 
-Full SQL is in [`/sql/retail_analytics_views.sql`](sql/retail_analytics_views.sql) — 14 views covering cleaning, time-series analysis, customer segmentation, and profitability.
+Full SQL is in [`/SQL/retail_analytics_views.sql`](SQL/retail_analytics_views.sql) — 14 views covering cleaning, time-series analysis, customer segmentation, and profitability.
 
 ---
 
@@ -163,23 +170,23 @@ Electronics, Clothing, and Beauty contribute near-equal revenue shares (~31–34
 ## 📁 Repository Structure
 
 ```
-retail-intelligence-dashboard/
+RETAIL-SALES-ANALYSIS/
 │
-├── sql/
+├── SQL/
 │   └── retail_analytics_views.sql      # All 14 PostgreSQL views
 │
-├── powerbi/
+├── Dashboard/
 │   └── retail_dashboard.pbix           # Power BI dashboard file
 │
-├── screenshots/
+├── Screenshots/
 │   ├── page1_executive_summary.png
 │   ├── page2_sales_trends.png
 │   ├── page3_customer_analytics.png
 │   ├── page4_category_profitability.png
 │   └── page5_rfm_segments.png
 │
-├── data/
-│   └── retail_sales_sample.csv         # Sample/anonymized dataset (optional)
+├── Dataset/
+│   └── retail_sales_sample.csv         # Sample/anonymized dataset
 │
 └── README.md
 ```
@@ -189,9 +196,9 @@ retail-intelligence-dashboard/
 ## ▶️ How to Run This Project
 
 1. **Set up PostgreSQL** — create a database and import the dataset into a `retail_sales` table
-2. **Run the SQL script** — execute `sql/retail_analytics_views.sql` to build all 14 views
+2. **Run the SQL script** — execute `SQL/retail_analytics_views.sql` to build all 14 views
 3. **Connect Power BI** — open Power BI Desktop → Get Data → PostgreSQL → import the views (Import mode)
-4. **Open the dashboard** — load `powerbi/retail_dashboard.pbix` and refresh the data connection
+4. **Open the dashboard** — load `Dashboard/retail_dashboard.pbix` and refresh the data connection
 
 ---
 
@@ -213,8 +220,7 @@ retail-intelligence-dashboard/
 ## 👤 Author
 
 Sumit Jha
-MBA Analytics |
-📧 jhasumit0321@gmail.com | 🔗 https://www.linkedin.com/in/sumit-jha-245643210/ |
+MBA 
 
 ---
 
